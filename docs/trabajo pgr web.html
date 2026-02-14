@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.3 Elementos Básicos de la Programación Web</title>
+    <style>
+        /* Estilos CSS para mejorar la presentación */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        section {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .codigo-nota {
+            background-color: #e8f6f3;
+            border-left: 4px solid #1abc9c;
+            padding: 10px;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header style="text-align: center; margin-bottom: 40px;">
+        <h1>Ejemplificación del Tema 2.3: Elementos Básicos</h1>
+        <p>Este documento demuestra el uso de texto, vínculos, listas, tablas, objetos, imágenes y aplicaciones en HTML5.</p>
+    </header>
+
+    <section id="texto">
+        <h2>1. Elementos de Texto</h2>
+        <div class="codigo-nota">Se utilizan etiquetas de encabezado (h1-h6) y párrafo (p), así como formatos de énfasis.</div>
+        <h3>Esto es un subtítulo (h3)</h3>
+        <p>Esto es un párrafo estándar. El texto es el componente fundamental de la web. 
+        Podemos poner texto en <strong>negrita (strong)</strong> para importancia o en <em>cursiva (em)</em> para énfasis.</p>
+        <p>También podemos usar <small>texto pequeño</small> y <mark>resaltado</mark>.</p>
+    </section>
+
+    <section id="vinculos">
+        <h2>2. Vínculos (Hiperenlaces)</h2>
+        <div class="codigo-nota">La etiqueta &lt;a&gt; (anchor) conecta recursos. El atributo 'href' es el destino.</div>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">Enlace externo a Google</a> (se abre en nueva pestaña).</li>
+            <li><a href="#tablas">Enlace interno (Ancla)</a> (te lleva a la sección de tablas más abajo).</li>
+            <li><a href="mailto:ejemplo@correo.com">Enlace de correo electrónico</a>.</li>
+        </ul>
+    </section>
+
+    <section id="listas">
+        <h2>3. Listas</h2>
+        <div class="codigo-nota">Se usan &lt;ul&gt; para no ordenadas (puntos) y &lt;ol&gt; para ordenadas (números).</div>
+        <h4>Lista No Ordenada (Ingredientes):</h4>
+        <ul>
+            <li>Harina</li>
+            <li>Agua</li>
+            <li>Sal</li>
+        </ul>
+        <h4>Lista Ordenada (Pasos):</h4>
+        <ol>
+            <li>Mezclar ingredientes.</li>
+            <li>Amasar por 10 minutos.</li>
+            <li>Hornear.</li>
+        </ol>
+    </section>
+
+    <section id="tablas">
+        <h2>4. Tablas</h2>
+        <div class="codigo-nota">Estructuradas con &lt;table&gt;, &lt;tr&gt; (filas), &lt;th&gt; (encabezados) y &lt;td&gt; (celdas).</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Experiencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ana García</td>
+                    <td>Desarrolladora Web</td>
+                    <td>5 años</td>
+                </tr>
+                <tr>
+                    <td>Carlos López</td>
+                    <td>Diseñador UX</td>
+                    <td>3 años</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="imagenes">
+        <h2>5. Imágenes</h2>
+        <div class="codigo-nota">La etiqueta &lt;img&gt; es de cierre automático. Requiere 'src' (fuente) y 'alt' (texto alternativo).</div>
+        <p>Imagen cargada desde una URL externa:</p>
+        <img src="https://via.placeholder.com/300x150" alt="Imagen de ejemplo color gris" style="border: 1px solid #ccc;">
+        <p><small>Nota: Si la imagen no carga, verás este texto alternativo.</small></p>
+    </section>
+
+    <section id="objetos">
+        <h2>6. Objetos (Multimedia/Incrustados)</h2>
+        <div class="codigo-nota">La etiqueta &lt;object&gt; permite incrustar recursos externos como PDFs o SVGs.</div>
+        <p>A continuación se muestra un objeto incrustado (simulando un PDF):</p>
+        <object data="archivo_inexistente.pdf" type="application/pdf" width="300" height="150" style="border: 1px dashed red; padding: 10px;">
+            <p><strong>Fallback:</strong> Tu navegador no soporta el objeto o el archivo no existe. Imagina aquí un documento PDF incrustado.</p>
+        </object>
+    </section>
+
+    <section id="aplicaciones">
+        <h2>7. Aplicaciones Web (Formularios)</h2>
+        <div class="codigo-nota">Los &lt;form&gt; son la base de la entrada de datos en aplicaciones web.</div>
+        <form onsubmit="alert('¡Datos enviados! Esto simula una aplicación web procesando información.'); return false;">
+            <label for="nombre">Nombre de usuario:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe aquí..." required><br><br>
+            
+            <label for="nivel">Nivel de Conocimiento:</label><br>
+            <select id="nivel" name="nivel">
+                <option value="basico">Básico</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select><br><br>
+            
+            <input type="submit" value="Procesar Datos (Simular App)">
+        </form>
+    </section>
+
+    <footer style="text-align: center; margin-top: 50px; color: #777;">
+        <p>Armas Diaz Erick,Ramos Vazquez Francisco,Quiñones Morfin Elian,Ley Gomez jared - Tema 2.3</p>
+    </footer>
+
+</body>
+</html>
